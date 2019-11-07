@@ -25,10 +25,10 @@ class ChallengeTests: XCTestCase {
 
     override func tearDown() {}
     
-    func testInfoLoading() {
+    func testgetAccountWalletAPI() {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         XCTAssertNotNil(sb, "Could not instantiate storyboard for Info View content loading")
-        guard let vc = sb.instantiateViewController(withIdentifier: "InformationView") as? ViewController else {
+        guard let vc = sb.instantiateViewController(withIdentifier: "InformationView") as? ShowAccountViewController else {
             XCTAssert(false, "Could not instaniate view controller for Info View content loading")
             return
         }
@@ -45,7 +45,7 @@ class ChallengeTests: XCTestCase {
 
     
     
-    func testInfo() {
+    func testInfoAccountWallet() {
         
         let jsonData = json.data(using: .utf8)
         let decoder = JSONDecoder()
